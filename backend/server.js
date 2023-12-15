@@ -3,7 +3,7 @@ const app = express();
 import cors from "cors";
 
 import connectDB from "./config/db.js";
-import router from "./route/formRoute.js";
+import router from "./route/FormRoute.js";
 
 const PORT = process.env.PORT || 1000;
 
