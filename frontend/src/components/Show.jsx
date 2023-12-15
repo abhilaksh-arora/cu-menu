@@ -5,13 +5,17 @@ const Show = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:1000/api/form", {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://cu-menu-abhilaksh-arora.vercel.app/api/form",
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

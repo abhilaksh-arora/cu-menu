@@ -1,7 +1,8 @@
 import React from "react";
+import Show from "./Show";
 
 const InputForm = () => {
-  const base = "http://localhost:1000";
+  const base = "https://cu-menu-abhilaksh-arora.vercel.app/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ const InputForm = () => {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
           type: type.value,
@@ -73,6 +75,7 @@ const InputForm = () => {
             </form>
           </div>
         </div>
+        <Show />
       </section>
     </div>
   );
